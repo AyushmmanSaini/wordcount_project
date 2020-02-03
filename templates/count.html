@@ -1,0 +1,13 @@
+<h1>Counting the words</h1>
+
+<h3><a href="{% url 'home' %} ">Start Again</a></h3>
+<h2>Your text:</h2><br>
+{{ text }}
+
+<h3>No. of words are:  {{ wd_count }} </h3>
+
+{% for word, count_total in sorted_words %}
+{{ word}} - {{count_total}}
+<br>
+
+{% endfor %}
